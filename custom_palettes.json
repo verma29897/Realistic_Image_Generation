@@ -1,0 +1,64 @@
+{
+  "sunset_golden": {
+    "name": "sunset_golden",
+    "description": "Golden sunset colors",
+    "colors": [
+      "#FF6B35",
+      "#F7931E",
+      "#FFD23F",
+      "#FFEAA7",
+      "#DDA0DD"
+    ],
+    "prompt_addition": "golden sunset lighting, warm orange tones, romantic atmosphere",
+    "negative_addition": "cool colors, blue lighting, cold atmosphere"
+  },
+  "my_custom_palette": {
+    "name": "my_custom_palette",
+    "description": "Extracted from test.jpg using dominant method",
+    "colors": [
+      "#c6c6c6",
+      "#c6c6c6",
+      "#c6c6c6",
+      "#c6c6c6",
+      "#c6c6c6",
+      "#c6c6c6"
+    ],
+    "source_image": "input_images/test.jpg",
+    "extraction_method": "dominant",
+    "num_colors": 6,
+    "analysis": {
+      "type": "muted",
+      "brightness": "bright",
+      "color_scheme": "monochromatic",
+      "avg_saturation": 0.0,
+      "avg_value": 0.7764705882352941,
+      "hue_range": 0.0
+    },
+    "prompt_addition": "bright lighting, vibrant atmosphere, soft colors, muted tones, monochromatic color palette",
+    "negative_addition": "dark, shadowy, oversaturated, artificial"
+  },
+  "test_colors": {
+    "name": "test_colors",
+    "description": "Extracted from test.jpg using kmeans method",
+    "colors": [
+      "#c3c3c3",
+      "#e8e8e8",
+      "#a1a1a1",
+      "#6f6f6f",
+      "#2f2f2f"
+    ],
+    "source_image": "input_images/test.jpg",
+    "extraction_method": "kmeans",
+    "num_colors": 5,
+    "analysis": {
+      "type": "muted",
+      "brightness": "medium",
+      "color_scheme": "monochromatic",
+      "avg_saturation": 0.0,
+      "avg_value": 0.5850980392156864,
+      "hue_range": 0.0
+    },
+    "prompt_addition": "balanced lighting, natural atmosphere, soft colors, muted tones, monochromatic color palette",
+    "negative_addition": "oversaturated, artificial"
+  }
+}

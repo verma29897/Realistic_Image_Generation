@@ -1,0 +1,27 @@
+# Stable Diffusion ControlNet Configuration - Optimized for Photorealistic Results
+model:
+  base_model: "runwayml/stable-diffusion-v1-5"
+  controlnet_model: "lllyasviel/sd-controlnet-canny"
+  device: "cpu"  # Using CPU due to GPU compatibility
+  dtype: "float32"  # float32 required for CPU
+  
+generation:
+  num_inference_steps: 25  # Increased for better quality and preservation
+  guidance_scale: 8.5  # Higher guidance for more faithful reproduction
+  controlnet_conditioning_scale: 1.2  # Stronger control for structure preservation
+  seed: 42
+  
+image:
+  input_size: [512, 512]  # Higher resolution for better detail preservation
+  output_size: [512, 512]
+  canny_low_threshold: 100
+  canny_high_threshold: 200
+  
+prompts:
+  default_positive: "photorealistic, exact composition, natural skin tones, realistic lighting, sharp focus, high resolution, detailed, authentic colors, preserve details, maintain features, realistic texture"
+  default_negative: "artistic, painting, drawing, sketch, cartoon, anime, digital art, illustration, stylized, abstract, oversaturated, artificial colors, HDR, over-processed, blurry, low quality, distorted, deformed, black and white, monochrome, grayscale, sepia, fantasy, dreamlike, ethereal, magical"
+  
+paths:
+  input_dir: "./input_images"
+  output_dir: "./output_images"
+  cache_dir: "./model_cache"
